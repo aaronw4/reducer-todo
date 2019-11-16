@@ -1,8 +1,14 @@
 import React from 'react';
 
-const TodoList = () => {
+const TodoList = (props) => {
     return(
-        <div></div>
+        <div>
+            {props.state.map(item => (
+                <div>
+                {item.item}
+                </div>
+            ))}
+        </div>
     )
 }
 
