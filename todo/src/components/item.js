@@ -16,7 +16,7 @@ const Item = props => {
         <div>
             <p>
                 <span className={itemClassName} onClick={handleClick} value={props.item.id}>{props.item.item} </span>
-                {props.item.completed === true ?  <span> Completed {moment().calendar()}</span> : null}
+                {props.item.completed === true ?  <span className='time'> Completed {moment().calendar()}</span> : null}
             </p>
         </div>
     )
