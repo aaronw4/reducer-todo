@@ -19,7 +19,11 @@ export const todoReducer = (state, action) => {
         case 'toggleCompleted':         
             return state.map(item => 
                 item.id === action.payload ? {...item, completed: !item.completed} : item
-            )
+            );
+        case 'clearCompleted':
+            return state.filter(item => 
+                !item.completed
+            );
         default: return state;
     }    
 }

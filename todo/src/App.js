@@ -7,8 +7,8 @@ import './App.css';
 function App() {
   const [state, dispatch] = useReducer(todoReducer, initialState);
 
-  const addItem = task => {
-    dispatch({ type: 'addToList', payload: task.target.value})
+  const clearCompleted = () => {
+    dispatch({type:'clearCompleted', payload: state})
   }
 
   return (
@@ -21,6 +21,7 @@ function App() {
         state={state}
         dispatch={dispatch}
       />
+      <button onClick={clearCompleted}>Clear Completed Task</button>
     </div>
   );
 }

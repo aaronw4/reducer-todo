@@ -2,7 +2,7 @@ import React from 'react';
 
 const Item = props => {
     let itemClassName = 'item';
-    console.log(props.item)
+    
     if (props.item.completed) {
         itemClassName = itemClassName + ' completed';
     }
